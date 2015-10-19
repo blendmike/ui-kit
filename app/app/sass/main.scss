@@ -1,0 +1,247 @@
+@import "../fonts/fonts.scss";
+@import "applicationStart.scss";
+@import "variables.scss";
+@import "mixins.scss";
+// Global Components
+
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+header{
+  position: fixed !important;
+  height:100%;
+  left:0;
+  padding:0;
+  z-index: 9999;
+  background:#14252E;
+}
+
+.main-container{
+  position: absolute;
+  background:#fafafa;
+  min-height: 100%;
+  left:25%;
+}
+
+nav{
+  width: 100%;
+  ul{
+    padding:0;
+    margin:0;
+    width:100%;
+
+    ul{
+      display: none;
+    }
+    li{
+      list-style: none;
+      color:#fff;
+      padding:10px;
+      border-top:1px #fff solid;
+      cursor: pointer;
+      text-transform: capitalize;
+      &.open{
+        ul{
+          display: block;
+        }
+      }
+      li{
+        margin:0;
+        padding:0;
+        border:none;
+        padding-left:20px;
+        margin-top:10px;
+      }
+    }
+  }
+}
+
+.inner-container{
+  max-width:1040px;
+  margin:0 auto;
+}
+
+.text-muted {
+  color: $gray;
+}
+
+.text-primary {
+  color: $brand-primary;
+}
+
+
+.emblem-start{
+  .inner-container{
+    background:#000;
+  }
+}
+
+#services{
+
+  padding:0;
+  background:rgba(255, 255, 255, .95);
+  float: left;
+  position: relative;
+  width: 100%;
+    @media(max-width : 420px){
+      padding-top:30px;
+    }
+  .service{
+    @media(max-width : 420px){
+      margin-left:3%;
+      padding:0;
+      margin-bottom:20px;
+      float:left;
+      width:90%;
+      left:5%;
+    }
+    float:left;
+    display: block;
+    cursor: pointer;
+    font-family: $whitney;
+    h4{
+      float:left;
+      clear:right;
+      font-size:28px;
+      color:#495452;
+    }
+  &.prepare{
+      background:url(../img/service-prepare.png) no-repeat 45px center;
+  }
+  &.calculate{
+      background:url(../img/service-calculate.png) no-repeat 45px center;
+  }
+  &.compare{
+      background:url(../img/keys.svg) no-repeat 45px center;
+  }
+    text-align: left;
+    padding:0 !important;
+    border-right:rgba(73, 84, 82, .15) 1px solid;
+    &:last-child{
+      border-right:none;
+    }
+    .inner{
+     color:#333;
+     padding:20px;
+     padding-bottom:30px;
+     float:left;
+     padding-left:136px;
+
+     .service-heading{
+      // font-size:32px;
+     }
+
+     p{
+      float:left;
+      font-size:14px;
+      padding-right:25px;
+      line-height:20px;
+      font-family: $gotham;
+
+     }
+
+    }
+  }
+
+  // .service:last-child{
+  //   padding-right:0
+  // }
+
+  .service-container{
+    width:100%;
+  }
+
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+p.large {
+  font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+
+a {
+  color: $brand-primary;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: darken($brand-primary, 10%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  .heading-font{
+    font-weight: 700;  
+  }
+}
+
+.img-centered {
+  margin: 0 auto;
+}
+
+.bg-light-gray {
+  background-color: $gray-lighter;
+}
+
+.bg-darkest-gray {
+  background-color: $gray-darkest;
+}
+
+// Restyled Primary Buttons
+
+.btn-primary {
+  .heading-font{
+    font-weight: 700;  
+  }
+  
+}
+
+.btn-xl {
+  
+  .heading-font{
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+}
+
+
+// Highlight Color Customization
+
+::-moz-selection {
+    text-shadow: none;
+    background: $brand-primary;
+}
+
+::selection {
+    text-shadow: none;
+    background: $brand-primary;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: $brand-primary;
+}

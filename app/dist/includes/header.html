@@ -1,0 +1,13 @@
+<nav class="navbar col-md-12">
+    <img width="140" src="https://blendlabs.com/wp-content/themes/blendlabs/images/logo.svg" />
+    <ul ng-repeat="(key, val) in data">
+        <li>
+            <a ng-click="toggleMenu($event);" href="javascript:void(0)">{{ key | removeSpacesThenLowercase}}</a>
+            <ul>
+                <li ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, subNav.html);">
+                    {{subNav.name}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
