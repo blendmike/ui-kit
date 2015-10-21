@@ -3,11 +3,14 @@ var blend_ui = {
     form_inputs: [
       {
         name : 'Text',
-        html : '<input type="text" placeholder="text field"/>'
+        html : '<input type="text" placeholder="text field"/>',
+        config : ['long_text','short_text']
       },
       {
         name : 'Textarea',
-        html : '<textarea></textarea>'
+        html : '<textarea></textarea>',
+        config : ['long_text','short_text']
+
       },
       {
         name : 'Number',

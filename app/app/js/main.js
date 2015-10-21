@@ -43,38 +43,42 @@
     };
   });
 
-    app.filter('slugify', []).filter('slugify', function() {
+  app.filter('slugify', []).filter('slugify', function() {
     return function(text) {
       var str = text.replace(/ /g,"-");
       return str.toLowerCase();
     };
   });
-  app.controller('HeaderCtrl', ['$scope', '$location', '$filter', '$compile',
-    function($scope, $location, $filter, $compile) {
+
+  app.factory('Data', function(){
+      return { FirstName: 'mike' };
+  });
+
+  app.controller('HeaderCtrl', ['$scope', '$rootScope', '$location', '$filter', '$compile', 'Data',
+    function($scope, $rootScope, $location, $filter, $compile, Data) {
       $scope.data = blend_ui.navigation;
       $scope.toggleMenu = function(event) {
         $(event.target).parent().toggleClass('open');
       }
-      $scope.runComponent = function(a,b) {
-
+      $scope.runComponent = function(a,b,c) {
+        
+        $rootScope.headerFilters = c;
         $scope.component = $filter('compress')(a)
         $('#main-container').empty();
         var el = $compile( "<div my-customer>"+$scope.component+"</div>" )( $scope );
         $('#main-container').append( b );
-    
-    
       }
     }
   ])
   //Load controller
   app.controller('MainController', [
-    '$scope', '$location',
-    function($scope, $location) {
-      console.log($scope.data);
-      // var navObj = Object.keys(blend_ui.navigation).length;
-      // for (var i = 0; i < nav.length; i++) {
-      //   nav[i]
-      // };
+    '$scope', '$rootScope','$location', 'Data',
+    function($scope, $rootScope, $location, Data) {
+    
+        $rootScope.$watch('headerFilters', function(){
+          $scope.filters = $rootScope.headerFilters;
+          console.log($scope.filters);
+        }, true);
     }
   ]);
   app.directive('runPresentation', function($timeout) {
