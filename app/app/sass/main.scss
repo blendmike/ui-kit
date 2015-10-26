@@ -20,6 +20,23 @@ header{
   padding:0 !important;
 }
 
+.view-port{
+  width:50%;
+  padding:20px;
+  top:70px;
+  position: relative;
+  position:absolute;
+  float:left;
+  height:100%;
+  z-index: 0;
+}
+
+.lender.view-port{
+  margin-left:50%;
+  background:#fafafa;
+  height:100%;
+}
+
 
   .brand{
     background:#14252E;
@@ -36,8 +53,43 @@ header{
 .dashboard-header{
   height:70px;
   box-shadow:#E0E0E0 0 1px 3px 0px;
+  background:#14252E;
 
 }
+
+#split-bar {
+    background: rgba(235,235,235,1);
+background: -moz-linear-gradient(left, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 68%, rgba(235,235,235,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,235,235,1)), color-stop(35%, rgba(255,255,255,1)), color-stop(68%, rgba(255,255,255,1)), color-stop(100%, rgba(235,235,235,1)));
+background: -webkit-linear-gradient(left, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 68%, rgba(235,235,235,1) 100%);
+background: -o-linear-gradient(left, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 68%, rgba(235,235,235,1) 100%);
+background: -ms-linear-gradient(left, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 68%, rgba(235,235,235,1) 100%);
+background: linear-gradient(to right, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 68%, rgba(235,235,235,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ebebeb', GradientType=1 );
+    height:100%;
+    left:50%;
+    margin-left:-14px;
+    position: absolute;
+    width: 14px;
+    cursor: col-resize;
+    z-index: 999;
+
+
+}
+#split-bar:after {
+    content : '';
+    background-image:url(../img/bar-split.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top:50%;
+    width:10px;
+    height:25px;
+    margin-top:-15px;
+    left:2px;
+}
+
+
 
 .main-container{
   position: absolute;
@@ -290,4 +342,59 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: $brand-primary;
+}
+
+
+
+
+
+
+
+
+//input designs
+
+.blend-input, .blend-textarea{
+      display: block;
+    height: 33px;
+    line-height: 25px;
+    width: 380px;
+    font-size: 12px !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-top-right-radius: 2px;
+    -moz-border-top-left-radius: 2px;
+    -moz-border-bottom-right-radius: 2px;
+    -moz-border-bottom-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding: 0 0 0 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+    background-color: white;
+    outline:none;
+}
+
+
+.blend-textarea{
+  height:150px;
 }

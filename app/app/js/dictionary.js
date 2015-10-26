@@ -3,46 +3,46 @@ var blend_ui = {
     form_inputs: [
       {
         name : 'Text',
-        html : '<input type="text" placeholder="text field"/>',
-        config : ['long_text','short_text']
+        html : '<input type="text" class="blend-input" placeholder="text field"/>',
+        //config : ['long_text','short_text']
       },
       {
         name : 'Textarea',
-        html : '<textarea></textarea>',
-        config : ['long_text','short_text']
+        html : '<textarea class="blend-textarea" ></textarea>',
+        //config : ['long_text','short_text']
 
       },
       {
         name : 'Number',
-        html : '<input type="number" placeholder="Number"/>'
+        html : '<input type="number" class="blend-input" placeholder="Number"/>'
       },
       {
         name : 'Email',
-        html : '<input type="email" placeholder="Email"/>'
+        html : '<input type="email" class="blend-input" placeholder="Email"/>'
       },
       {
         name : 'Date',
-        html : '<input type="date"/>'
+        html : '<input type="date" class="blend-input"/>'
       },
       {
         name : 'Date Range',
-        html : '<input type="range"/>'
+        html : '<input type="range" class="blend-input"/>'
       },
       {
         name : 'Phone',
-        html : '<input class="phone-input" type="tel"/>'
+        html : '<input class="phone-input" class="blend-input" type="tel"/>'
       },
       {
         name : 'Dollar',
-        html : '<input class="currency" type="text"/>'
+        html : '<input class="currency blend-input"  type="text"/>'
       },
       {
         name : 'Social Security Number',
-        html : '<input class="social-security" type="text" placeholder="Social Security"/>'
+        html : '<input class="social-security blend-input" type="text" placeholder="Social Security"/>'
       },
       {
         name : 'Address',
-        html : '<input class="address" type="text" placeholder="address" />'
+        html : '<input class="address blend-input"  type="text" placeholder="address" />'
       },
       {
         name : 'Multiple Choice Select',

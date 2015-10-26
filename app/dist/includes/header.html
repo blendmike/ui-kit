@@ -6,7 +6,7 @@
         <li>
             <a ng-click="toggleMenu($event);" href="javascript:void(0)">{{ key | removeSpacesThenLowercase}}</a>
             <ul>
-                <li ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, subNav.html);">
+                <li ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, subNav.html, subNav.config);">
                     {{subNav.name}}
                 </li>
             </ul>

@@ -64,9 +64,9 @@
         
         $rootScope.headerFilters = c;
         $scope.component = $filter('compress')(a)
-        $('#main-container').empty();
+        $('.borrower, .lender').empty();
         var el = $compile( "<div my-customer>"+$scope.component+"</div>" )( $scope );
-        $('#main-container').append( b );
+        $('.borrower, .lender').append( b );
       }
     }
   ])
@@ -74,11 +74,38 @@
   app.controller('MainController', [
     '$scope', '$rootScope','$location', 'Data',
     function($scope, $rootScope, $location, Data) {
-    
         $rootScope.$watch('headerFilters', function(){
           $scope.filters = $rootScope.headerFilters;
           console.log($scope.filters);
         }, true);
+
+
+
+        $('.view-port').height($(window).height() - 0);
+        var min = 300;
+        var max = 3600;
+        var mainmin = 200;
+
+        $('#split-bar').mousedown(function (e) {          
+            e.preventDefault();
+            $(document).mousemove(function (e) {
+                console.log(e);
+                e.preventDefault();
+                var x = e.pageX - $('.borrower').offset().left;
+                if (x > min && x < max && e.pageX < ($(window).width() - mainmin)) {  
+                  $('.borrower').css("width", x);
+                  $('#split-bar').css("left", x);
+                  $('.lender').css("margin-left", x);
+                  $('.lender').css("width", e.pageX + $('.borrower').offset().left);
+                }
+            })
+        });
+        $(document).mouseup(function (e) {
+            $(document).unbind('mousemove');
+        });
+
+
+
     }
   ]);
   app.directive('runPresentation', function($timeout) {
