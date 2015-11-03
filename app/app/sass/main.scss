@@ -2,6 +2,8 @@
 @import "applicationStart.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "../components/borrower/borrower.scss";
+@import "../components/lender/lender.scss";
 // Global Components
 
 body {

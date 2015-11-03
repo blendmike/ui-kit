@@ -16,22 +16,22 @@ var blend_ui = {
         name : 'Number',
         html : '<input type="number" class="blend-input" placeholder="Number"/>'
       },
-      {
-        name : 'Email',
-        html : '<input type="email" class="blend-input" placeholder="Email"/>'
-      },
+      // {
+      //   name : 'Email',
+      //   html : '<input type="email" class="blend-input" placeholder="Email"/>'
+      // },
       {
         name : 'Date',
         html : '<input type="date" class="blend-input"/>'
       },
-      {
-        name : 'Date Range',
-        html : '<input type="range" class="blend-input"/>'
-      },
-      {
-        name : 'Phone',
-        html : '<input class="phone-input" class="blend-input" type="tel"/>'
-      },
+      // {
+      //   name : 'Date Range',
+      //   html : '<input type="range" class="blend-input"/>'
+      // },
+      // {
+      //   name : 'Phone',
+      //   html : '<input class="phone-input" class="blend-input" type="tel"/>'
+      // },
       {
         name : 'Dollar',
         html : '<input class="currency blend-input"  type="text"/>'
@@ -49,23 +49,23 @@ var blend_ui = {
         html : '<select><option selected>Option 1</option><option value="">Option 2</option><option value="">Option 3</option><option value="" >Option 4</option></select>'
       },
       {
-        name : 'Multiple Choce Radio',
+        name : 'Multiple Choice Radio',
         html : '<input type="radio"><input type="radio"><input type="radio"><input type="radio">'
       },
+      // {
+      //   name : 'Checkboxes',
+      //   html : '<input type="checkbox">'
+      // },
+      // {
+      //   name : 'Multiple Checkboxes',
+      //   html : '<input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox">'
+      // },
       {
-        name : 'Checkboxes',
-        html : '<input type="checkbox">'
-      },
-      {
-        name : 'Multiple Checkboxes',
-        html : '<input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox">'
-      },
-      {
-        name : 'Autocomple Select',
+        name : 'Autocomplete Select',
         html : '<input type="text"/>'
       },
       {
-        name : 'Autocomple Input',
+        name : 'Autocomplete Input',
         html : '<input type="text"/><select><option selected>Option 1</option><option value="">Option 2</option><option value="">Option 3</option><option value="" >Option 4</option></select>'
       },
       {

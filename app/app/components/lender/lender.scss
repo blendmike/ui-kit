@@ -1,0 +1,197 @@
+.lender{
+    //each component class is affiliated to the lender component html page file name    
+
+
+
+    label{
+        word-wrap: break-word;
+        color: #44595f;
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 12px;
+        letter-spacing: -0.25px;
+        font-weight: normal;
+        font-family:'Gotham SSm A', 'Gotham SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    }
+
+    input[type="text"], input[type="number"]{
+        display: block;
+        height: 33px;
+        line-height: 25px;
+        width: 380px;
+        font-size: 12px;
+        border-radius: 2px;
+        background-clip: padding-box;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        padding: 0 0 0 10px;
+        border: 1px solid #e0e0e0;
+        box-shadow: none;
+        background-color: white;
+        color:#1a2d37;
+        letter-spacing: -0.025em;
+        font-family: 'Gotham SSm A', 'Gotham SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        outline: none;
+    }
+
+    .input-wrapper{
+        width: 180px;
+        border: 1px solid #e0e0e0;
+        padding: 0 0 0 13px;
+        position: relative;
+        border-radius: 2px;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        float: left;
+        clear: both;
+
+
+        input[type="text"] {
+            height: 34px;
+            line-height: 14px;
+            float: right;
+            width: 84%;
+            display: inline-block;
+            border: none;
+            padding: 10px 10px 10px 0;
+            cursor: pointer;
+        }
+
+        .bl-icon {
+            float: left;
+            margin-top: 10px;
+            color: #aaadad;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    //global end
+
+    .address{
+
+    }
+
+    .autocomplete_input{
+
+    }
+
+    .autocomplete_select{
+
+    }
+
+    .checkboxes{
+
+    }
+
+    .date{
+        label{
+            float:left;
+        }
+        .date-container{
+            float:left;
+            clear:both;
+            margin-bottom:10px;
+        }
+    }
+
+    .dollar{
+        input{
+            width: 180px;
+        }
+    }
+
+    .multiple_checkboxes{
+
+    }
+
+    .multiple_choice_radio{
+        input[type="radio"]{
+            float:left;
+            width: auto !important;
+            height: auto !important;
+            vertical-align: top;
+            margin: 1px 15px 0 0;
+        }
+
+        label{
+            float:left;
+        }
+
+        .input-text{
+            display: block;
+            width:100%;
+            float:left;
+            clear: both;
+        }
+
+    }
+
+    .multiple_choice_select{
+        select{
+                display: block;
+                height: 33px;
+                line-height: 25px;
+                width: 380px;
+                font-size: 12px !important;
+                border-radius: 2px;
+                background-clip: padding-box;
+                border-top-right-radius: 2px;
+                border-top-left-radius: 2px;
+                border-bottom-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+                padding: 0 0 0 10px;
+                border: 1px solid #e0e0e0;
+                box-shadow: none;
+                background-color: white;
+                outline: none;
+                width:180px;
+        }
+    }
+
+    .number{
+
+    }
+
+    .select_institution{
+
+    }
+
+    .social_security_number{
+
+    }
+
+    .text{
+
+    }
+
+    .textarea{
+        textarea{
+            width: 380px;
+            display: block;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+        }
+    }
+
+    .toggle{
+
+    }
+
+
+
+
+}

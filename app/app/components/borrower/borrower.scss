@@ -1,0 +1,130 @@
+.borrower{
+    //each component class is affiliated to the borrower component html page file name    
+
+
+    //global styles
+
+
+        .form-cont{
+        background:#E6EBED !important;
+        border-radius:4px;
+        padding-top:5px;
+        
+        .form-group{
+            border-bottom:1px solid #fff;
+            padding: 10px 20px;
+            margin-bottom: 0;
+            display: block;
+            width: 100%;            
+        }
+        label{
+            font-family: 'Whitney SSm A', 'Whitney SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            width: 30%;
+            color: #334d5c;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="number"]{
+            border: 0;
+            background-color: transparent;
+            color: #334d5c;
+            outline: none;
+        }   
+    }
+
+     input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    //global end
+
+    .address{
+
+    }
+
+    .autocomplete_input{
+
+    }
+
+    .autocomplete_select{
+
+    }
+
+    .checkboxes{
+
+    }
+
+    .date{
+
+    }
+
+    .dollar{
+
+    }
+
+    .multiple_checkboxes{
+
+    }
+
+    .multiple_choice_radio{
+
+    }
+
+    .multiple_choice_select{
+
+    }
+
+    .number{
+
+    }
+
+    .select_institution{
+
+    }
+
+    .social_security_number{
+
+    }
+
+    .text{
+
+    }
+
+    .textarea{
+         border: 1px solid #e0e0e0;
+         margin-top:10px;
+         border-radius:4px;
+         width:80%;
+         position: relative;
+         padding:10px;
+         textarea{
+            border:none;
+            padding:0;
+            min-height:150px;
+            width:100%;
+            text-align: left;
+
+         }
+
+         button{
+            background:#0078b0;
+            border:none;
+            color:#fff;
+            padding:10px 15px;
+            border-radius:4px;
+            left: 10%;
+            position: absolute;
+            width:80%;
+            top:70%;
+         }
+
+    }
+
+    .toggle{
+
+    }  
+}

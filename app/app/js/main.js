@@ -29,6 +29,69 @@
         });
     }
   ]);
+  app.directive("limitTo", [function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+            var limit = parseInt(attrs.limitTo);
+            angular.element(elem).on("keydown", function(event) {
+                if(event.keyCode != 8){
+                  if (this.value.length == limit) return false;
+                }
+            });
+        }
+    }
+  }]);
+  app.directive("currency", [function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+            var currency = attrs.currency;
+            angular.element(elem).on("keyup", function(event) {
+                
+                elem.val(elem.val().split(',').join(''));
+                elem.val((elem.val()).replace(/\B(?=(?:\d{3})+(?!\d))/g, ","));
+                
+  
+            });
+        }
+    }
+  }]);
+  app.directive("ssn", [function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+            var currency = attrs.currency;
+            angular.element(elem).on("keyup", function(event) {
+                
+                if(elem.val().length < 10){
+                  
+                elem.val(elem.val().match(/\d{3}(?=\d{2,3})|\d+/g).join("-"));  
+                
+                }
+
+                
+                
+  
+            });
+        }
+    }
+  }]);
+  app.directive('calendar', function () {
+            return {
+                require: 'ngModel',
+                link: function (scope, el, attr, ngModel) {
+                    $(el).datepicker({
+                        dateFormat: 'yy-mm-dd',
+                        onSelect: function (dateText) {
+                            scope.$apply(function () {
+                                ngModel.$setViewValue(dateText);
+                            });
+                        }
+                    });
+                }
+            };
+        })
   app.filter('removeSpacesThenLowercase', function() {
     return function(text) {
       var str = text.replace(/[_-]/g, " ");
@@ -56,17 +119,23 @@
 
   app.controller('HeaderCtrl', ['$scope', '$rootScope', '$location', '$filter', '$compile', 'Data',
     function($scope, $rootScope, $location, $filter, $compile, Data) {
+      $rootScope.component = 'sdsdsd';
+      $rootScope.componentURL = 'sdfsdf';
       $scope.data = blend_ui.navigation;
       $scope.toggleMenu = function(event) {
         $(event.target).parent().toggleClass('open');
       }
       $scope.runComponent = function(a,b,c) {
-        
+        //a is component type. fitler just makes it url friendly
         $rootScope.headerFilters = c;
-        $scope.component = $filter('compress')(a)
-        $('.borrower, .lender').empty();
-        var el = $compile( "<div my-customer>"+$scope.component+"</div>" )( $scope );
-        $('.borrower, .lender').append( b );
+        // $('.borrower, .lender').empty();
+        $rootScope.component = $filter('compress')(a)
+
+        $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.component+'.html';
+        $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.component+'.html';
+        //var el = $compile( '<div ng-include="/components/lender/input.html"></div>' )( $scope );
+        
+
       }
     }
   ])
