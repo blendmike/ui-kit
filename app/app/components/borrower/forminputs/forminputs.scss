@@ -1,0 +1,92 @@
+.address{
+
+}
+
+.autocomplete_input{
+
+}
+
+.autocomplete_select{
+
+}
+
+.checkboxes{
+
+}
+
+.date{
+
+}
+
+.dollar{
+
+}
+
+.multiple_checkboxes{
+
+}
+
+.multiple_choice_radio{
+
+}
+
+.multiple_choice_select{
+    select{
+        border-radius:4px;
+        border:#c1c1c2 1px solid;
+        background:#fff;
+        outline:none;
+        height:35px;
+        width:180px;
+    }
+}
+
+.number{
+
+}
+
+.select_institution{
+
+}
+
+.social_security_number{
+
+}
+
+.text{
+
+}
+
+.textarea{
+     border: 1px solid #e0e0e0;
+     margin-top:10px;
+     border-radius:4px;
+     width:80%;
+     position: relative;
+     padding:10px;
+     textarea{
+        border:none;
+        padding:0;
+        min-height:150px;
+        width:100%;
+        text-align: left;
+
+     }
+
+     button{
+        background:#0078b0;
+        border:none;
+        color:#fff;
+        padding:10px 15px;
+        border-radius:4px;
+        left: 10%;
+        position: absolute;
+        width:80%;
+        top:70%;
+     }
+
+}
+
+.toggle{
+
+}  

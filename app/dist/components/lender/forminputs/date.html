@@ -1,0 +1,16 @@
+<div class="date">
+  <div class="date-container">
+    <label>Start Date</label>
+    <div class="input-wrapper" ng-class="{ 'error-box': errorMessage[input.text] }">
+      <i class="bl-icon icon-calendar"></i>
+      <input type="text" calendar datepicker-popup="MM/dd/yyyy" datepicker-options="dateOptions" tabindex="10" ng-model="inputValues[input.text]" ng-disabled="isDisabled" id="item-Completion Date-Application Closure Notice" show-button-bar="false" is-open="datePickerOpen" ng-click="datePickerOpen = true" ng-change="clearErrors()" placeholder="MM / DD / YYYY" date-input="" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date-input ng-valid-date"><!-- ngIf: isOpen -->
+    </div>
+  </div>
+  <div class="date-container">
+    <label>End Date</label>
+    <div class="input-wrapper" ng-class="{ 'error-box': errorMessage[input.text] }">
+    <i class="bl-icon icon-calendar"></i>
+    <input type="text" calendar datepicker-popup="MM/dd/yyyy" datepicker-options="dateOptions" tabindex="10" ng-model="inputValues[input.text]" ng-disabled="isDisabled" id="item-Completion Date-Application Closure Notice" show-button-bar="false" is-open="datePickerOpen" ng-click="datePickerOpen = true" ng-change="clearErrors()" placeholder="MM / DD / YYYY" date-input="" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-date-input ng-valid-date"><!-- ngIf: isOpen -->
+    </div>
+  </div>
+</div>

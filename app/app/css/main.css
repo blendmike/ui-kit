@@ -3054,6 +3054,14 @@ nav img {
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
 }
+.borrower .multiple_choice_select select {
+  border-radius: 4px;
+  border: #c1c1c2 1px solid;
+  background: #fff;
+  outline: none;
+  height: 35px;
+  width: 180px;
+}
 .borrower .textarea {
   border: 1px solid #e0e0e0;
   margin-top: 10px;

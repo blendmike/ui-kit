@@ -1,0 +1,113 @@
+
+.address{
+
+}
+
+.autocomplete_input{
+
+}
+
+.autocomplete_select{
+
+}
+
+.checkboxes{
+
+}
+
+.date{
+    label{
+        float:left;
+    }
+    .date-container{
+        float:left;
+        clear:both;
+        margin-bottom:10px;
+    }
+}
+
+.dollar{
+    input{
+        width: 180px;
+    }
+}
+
+.multiple_checkboxes{
+
+}
+
+.multiple_choice_radio{
+    input[type="radio"]{
+        float:left;
+        width: auto !important;
+        height: auto !important;
+        vertical-align: top;
+        margin: 1px 15px 0 0;
+    }
+
+    label{
+        float:left;
+    }
+
+    .input-text{
+        display: block;
+        width:100%;
+        float:left;
+        clear: both;
+    }
+
+}
+
+.multiple_choice_select{
+    select{
+            display: block;
+            height: 33px;
+            line-height: 25px;
+            width: 380px;
+            font-size: 12px !important;
+            border-radius: 2px;
+            background-clip: padding-box;
+            border-top-right-radius: 2px;
+            border-top-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            padding: 0 0 0 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: none;
+            background-color: white;
+            outline: none;
+            width:180px;
+    }
+}
+
+.number{
+
+}
+
+.select_institution{
+
+}
+
+.social_security_number{
+
+}
+
+.text{
+
+}
+
+.textarea{
+    textarea{
+        width: 380px;
+        display: block;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+    }
+}
+
+.toggle{
+
+}
+
+
+

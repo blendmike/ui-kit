@@ -84,8 +84,8 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
   gulp.watch('./app/sass/*.scss', ['styles']);
-  gulp.watch('./app/components/borrower/*.scss', ['styles']);
-  gulp.watch('./app/components/lender/*.scss', ['styles']);
+  gulp.watch('./app/components/borrower/*/*.scss', ['styles']);
+  gulp.watch('./app/components/lender/*/*.scss', ['styles']);
   gulp.watch('./app/*.html', notifyLiveReload);
   gulp.watch('./app/partials/*.html', notifyLiveReload);
   gulp.watch('./app/css/*.css', notifyLiveReload);

@@ -129,10 +129,12 @@
         //a is component type. fitler just makes it url friendly
         $rootScope.headerFilters = c;
         // $('.borrower, .lender').empty();
-        $rootScope.component = $filter('compress')(a)
+        $rootScope.component = $filter('compress')(a);
+        $rootScope.folder = b.replace(/[_-]/g, "");
+        console.log($rootScope.folder);
 
-        $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.component+'.html';
-        $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.component+'.html';
+        $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.folder+'/'+$rootScope.component+'.html';
+        $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.folder+'/'+$rootScope.component+'.html';
         //var el = $compile( '<div ng-include="/components/lender/input.html"></div>' )( $scope );
         
 

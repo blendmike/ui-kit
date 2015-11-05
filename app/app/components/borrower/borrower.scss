@@ -2,8 +2,14 @@
     //each component class is affiliated to the borrower component html page file name    
 
 
-    //global styles
-
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************-----global start-----*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
 
         .form-cont{
         background:#E6EBED !important;
@@ -40,91 +46,28 @@
         margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
     }
 
-    //global end
 
-    .address{
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************------global end------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
+    //*******************----------------------*******************
 
-    }
 
-    .autocomplete_input{
+    @import 'buttons/buttons.scss';
+    @import 'chatbubbles/chatbubbles.scss';
+    @import 'docupload/docupload.scss';
+    @import 'forminputs/forminputs.scss';
+    @import 'graphics/graphics.scss';
+    @import 'listtypes/listtypes.scss';
+    @import 'misc/misc.scss';
+    @import 'progress/progress.scss';
+    @import 'splashscreens/splashscreens.scss';
+    @import 'taskscreens/taskscreens.scss';
+  
 
-    }
 
-    .autocomplete_select{
-
-    }
-
-    .checkboxes{
-
-    }
-
-    .date{
-
-    }
-
-    .dollar{
-
-    }
-
-    .multiple_checkboxes{
-
-    }
-
-    .multiple_choice_radio{
-
-    }
-
-    .multiple_choice_select{
-
-    }
-
-    .number{
-
-    }
-
-    .select_institution{
-
-    }
-
-    .social_security_number{
-
-    }
-
-    .text{
-
-    }
-
-    .textarea{
-         border: 1px solid #e0e0e0;
-         margin-top:10px;
-         border-radius:4px;
-         width:80%;
-         position: relative;
-         padding:10px;
-         textarea{
-            border:none;
-            padding:0;
-            min-height:150px;
-            width:100%;
-            text-align: left;
-
-         }
-
-         button{
-            background:#0078b0;
-            border:none;
-            color:#fff;
-            padding:10px 15px;
-            border-radius:4px;
-            left: 10%;
-            position: absolute;
-            width:80%;
-            top:70%;
-         }
-
-    }
-
-    .toggle{
-
-    }  
 }

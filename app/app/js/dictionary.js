@@ -89,10 +89,6 @@ var blend_ui = {
       {
         name : 'Secondary Submission Button',
         html : '<button>Secondary Submission Button</button>'
-      },
-      {
-        name : 'Another type here for saying no/skipping/etc.??',
-        html : 'Another type here for saying no/skipping/etc.??'
       }
     ],
     chat_bubbles: [
@@ -101,11 +97,11 @@ var blend_ui = {
         html : '<p> This is a chat bubble</p>'
       },
       {
-        name :'with “additional info” text on the bottom',
+        name :'Additional Info',
         html : '<p> This is a chat bubble <input type="text" /></p>'
       },
       {
-        name :'Error/alert bubbles',
+        name :'Error alert',
         html : '<p class="error"> This is a chat bubble with an error</p>'
       }
     ],
@@ -119,14 +115,14 @@ var blend_ui = {
         html : 'Remove document goes here'
       },
       {  
-        name : 'Chat bubble link to view document / download',
+        name : 'View Document',
         html : 'Chat bubble to view doc goes here'
       },
     ],
     progress: [
       {  
-        name : 'Application home progress bar',
-        html : 'Application home progress bar'
+        name : 'Home progress bar',
+        html : 'Home progress bar'
       },
       {  
         name : 'Doc upload progress bar',
@@ -157,7 +153,7 @@ var blend_ui = {
     ],
     task_screens: [
       {  
-        name : 'Splash / Milestone (header + image + subtext)',
+        name : 'Splash Milestone',
         html : 'Splash / Milestone (header + image + subtext)'
       },
       {  
@@ -175,7 +171,7 @@ var blend_ui = {
     ],
     list_types: [
       {  
-        name : 'Follow-ups',
+        name : 'Follow ups',
         html : 'Follow-ups'
       },
       {  
@@ -183,7 +179,7 @@ var blend_ui = {
         html : 'Application sections'
       },
       {  
-        name : 'Process navigation (lists of things to do within a process)',
+        name : 'Process navigation',
         html : 'Process navigation (lists of things to do within a process)'
       },
     ],
@@ -197,11 +193,11 @@ var blend_ui = {
         html : 'Welcome back screen'
       },
       {  
-        name : 'Application completed - stuff to do',
+        name : 'Application completed with more',
         html : 'Application completed - stuff to do'
       },
       {  
-        name : 'Application completed - nothing to do',
+        name : 'Application completed',
         html : 'Application completed - nothing to do'
       },
       {  
@@ -227,7 +223,7 @@ var blend_ui = {
         html : 'Tooltip'
       },
       {  
-        name : 'Modals (additional information screens)',
+        name : 'Modals',
         html : 'Modals (additional information screens)'
       },
       {  
