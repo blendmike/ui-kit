@@ -1,0 +1,102 @@
+  button{
+    background:#0078b0;
+    color:#fff;
+    border-radius: 4px;
+    width:90%;
+    text-align: center;
+    padding:1px;
+    border:none;
+    margin:0 auto;
+    padding:15px;
+    margin-left:5%;
+    margin-bottom:15px;
+  }
+
+.single_button{
+
+}
+
+.multiple_buttons{
+
+}
+
+.secondary_submission_button{
+  background:none !important;
+  .form-group{
+    padding:0;
+    background:none;
+  }
+  float:left;
+  width:95%;
+  .message{
+  &.convo{
+    padding:10px;
+    position: relative;
+
+    &:before{
+      content :'';
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 10px solid #e5ebed;
+      position: absolute;
+      left:-5px;
+      bottom:0;
+
+    }
+  }
+    border-radius:6px;
+    float:left;
+    width: 100%;  
+    margin-bottom:20px;
+    background:#e5ebed;
+    .message-alert{
+      width:100%;
+      background:#dbe1e4;
+      float:left;
+      margin:0;
+      margin-top:10px;
+      padding:5px 15px;
+      -webkit-border-bottom-right-radius: 6px;
+      -webkit-border-bottom-left-radius: 6px;
+      -moz-border-radius-bottomright: 6px;
+      -moz-border-radius-bottomleft: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      i{
+        float:left;
+        margin-top:5px;
+        font-size:16px;
+      }
+      a{
+        text-decoration:underline;
+        margin-left:5px;
+        float:left;
+        margin-top:1px;
+        display: block;
+      }
+    }
+  }
+  .payroll{
+    width:46%;
+    margin-left:2%;
+    margin-top:10px;
+    height:100px;
+    float:left;
+    display: block;
+    background-color:#fff;
+    &.adp{
+      background:#fff url(../img/adp.png) no-repeat center center;
+    }
+    &.paychex{
+      background:#fff url(../img/paychex.png) no-repeat center center;
+    }
+    &.intuit{
+      background:#fff url(../img/intuit.png) no-repeat center center;
+    }
+    &.zen{
+      background:#fff url(../img/zen.png) no-repeat center center;
+    }
+  }
+}

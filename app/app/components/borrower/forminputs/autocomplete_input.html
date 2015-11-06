@@ -1,6 +1,25 @@
-<div class="autocomplete_input">
-  <span class="input-text">
-    <label>Employer</label>
-    <input type="text" />
-  </span>
+<div class="autocomplete_input form-cont">
+  <div class="form-group">
+    <span class="input-text">
+      <label>Employer</label>
+      <input id="tags" type="text" />
+    </span>
+  </div>
 </div>
+
+
+<script>
+  $(function() {
+    var availableTags = [
+      "Blend",
+      "Pandora",
+      "Beyond",
+      "Palantir",
+      "Intuit",
+      "Microsoft"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+</script>

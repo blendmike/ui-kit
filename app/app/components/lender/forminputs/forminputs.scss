@@ -8,6 +8,22 @@
 }
 
 .autocomplete_select{
+   label{
+    position: relative;
+    padding-left:25px;
+    color:#c2c3c3;
+    margin-bottom:10px;
+    &:before{
+        content : '';
+        background: url(../img/message-content.png);
+        width:40px;
+        height:40px;
+        background-size:20px 20px;
+        position: absolute;
+        background-repeat:no-repeat;
+        left:0;
+    }
+   }
 
 }
 
@@ -85,7 +101,22 @@
 }
 
 .select_institution{
-
+     label{
+    position: relative;
+    padding-left:25px;
+    color:#c2c3c3;
+    margin-bottom:10px;
+    &:before{
+        content : '';
+        background: url(../img/message-content.png);
+        width:40px;
+        height:40px;
+        background-size:20px 20px;
+        position: absolute;
+        background-repeat:no-repeat;
+        left:0;
+    }
+   }
 }
 
 .social_security_number{
@@ -106,7 +137,38 @@
 }
 
 .toggle{
+    label {
+        display: inline-block;
+        position: relative; /* needed for checkbox absolute positioning */
+    }
 
+    label > input[type="checkbox"] {
+        display: block;
+        position: absolute; /* remove it from the flow */
+        width: 100%;
+        height: 100%;
+        margin: -.5rem; /* negative the padding of label to cover the "button" */
+        cursor: pointer;
+        opacity: 0; /* make it transparent */
+        z-index: 666; /* place it on top of everything else */
+    }
+
+    label > input[type="checkbox"] + span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background:#fff;
+        border: 1px solid #c9c9c9;
+        margin-right: .5rem;
+        border-radius:4px;
+        margin-top:1px;
+        float: left;
+        margin-right:10px;
+    }
+
+    label > input[type="checkbox"]:checked + span {
+        background-color: #ddd;
+    }
 }
 
 

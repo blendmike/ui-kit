@@ -125,13 +125,17 @@
       $scope.toggleMenu = function(event) {
         $(event.target).parent().toggleClass('open');
       }
+
+      $scope.runComponent;
+
+      
+
       $scope.runComponent = function(a,b,c) {
         //a is component type. fitler just makes it url friendly
         $rootScope.headerFilters = c;
         // $('.borrower, .lender').empty();
         $rootScope.component = $filter('compress')(a);
         $rootScope.folder = b.replace(/[_-]/g, "");
-        console.log($rootScope.folder);
 
         $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.folder+'/'+$rootScope.component+'.html';
         $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.folder+'/'+$rootScope.component+'.html';
@@ -139,6 +143,8 @@
         
 
       }
+
+      $scope.runComponent('text', 'forminputs', '');
     }
   ])
   //Load controller
@@ -147,7 +153,6 @@
     function($scope, $rootScope, $location, Data) {
         $rootScope.$watch('headerFilters', function(){
           $scope.filters = $rootScope.headerFilters;
-          console.log($scope.filters);
         }, true);
 
 

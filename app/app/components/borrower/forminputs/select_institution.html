@@ -1,6 +1,38 @@
-<div class="select_institution">
-  <span class="input-text">
-        <label>Select Institution</label>
-        <input type="text" />
-  </span>
+<div class="select_institution form-cont">
+  <div class="form-group">
+    <span class="input-text">
+      <label>Search for institution</label>
+      <input id="tags" type="text" />
+    </span>
+  </div>
 </div>
+
+
+<script>
+  $(function() {
+    var availableTags = [
+      "Morgan Chase & Co.",
+      "Bank of America", 
+      "Wells Fargo ",
+      "Citigroup", 
+      "PNC Financial Services Group",  
+      "HSBC Holdings",   
+      "Bank of New York Mellon",
+      "U.S. Bancorp",
+      "SunTrust Bank",
+      "San Diego County Credit Union",
+      "America First Federal Credit Union",
+      "Harleysville National Corp.", 
+      "BFC Financial Corp",
+      "Amcore Financial Inc.",
+      "NBT Bancorp Inc.",
+      "Central Pacific Financial Corp.",
+      "Sterling Bancshares",
+      "Banner Corp.",
+      "First Merchants Corp",
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+</script>
