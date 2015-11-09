@@ -1,0 +1,55 @@
+.standard_format{
+  background:none !important;
+  .form-group{
+    padding:0;
+    background:none;
+  }
+  float:left;
+  width:95%;
+  .message{
+     &:before{
+      content :'';
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 10px solid #e5ebed;
+      position: absolute;
+      left:-5px;
+      bottom:0;
+
+    }
+    border-radius:6px;
+    float:left;
+    width: 100%;  
+    margin-bottom:10px;
+    background:#e5ebed;
+    font-size:15px;
+    font-weight:400;
+    padding:15px 20px;
+    color:#4f6978;
+    position: relative;
+   
+  }
+  .payroll{
+    width:46%;
+    margin-left:2%;
+    margin-top:10px;
+    height:100px;
+    float:left;
+    display: block;
+    background-color:#fff;
+    &.adp{
+      background:#fff url(../img/adp.png) no-repeat center center;
+    }
+    &.paychex{
+      background:#fff url(../img/paychex.png) no-repeat center center;
+    }
+    &.intuit{
+      background:#fff url(../img/intuit.png) no-repeat center center;
+    }
+    &.zen{
+      background:#fff url(../img/zen.png) no-repeat center center;
+    }
+  }
+}

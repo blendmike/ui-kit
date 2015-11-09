@@ -11410,6 +11410,14 @@ section.module.type-team .logos li:last-child {
   margin-bottom: 20px;
 }
 
+.page-id-1206 .demo-navigation {
+  position: fixed;
+  width: 20%;
+  left: 5%;
+  top: 20%;
+  z-index: 9999;
+}
+
 .post-type-post .tags span {
   float: left;
 }
