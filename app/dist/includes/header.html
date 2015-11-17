@@ -3,10 +3,10 @@
 </div>
 <nav class="navbar col-md-12">
     <ul ng-repeat="(key, val) in data">
-        <li>
-            <a ng-click="toggleMenu($event);" href="javascript:void(0)">{{ key | removeSpacesThenLowercase}}</a>
+        <li ng-click="toggleMenu($event);">
+            {{ key | removeSpacesThenLowercase}}
             <ul>
-                <li ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, key, subNav.config);">
+                <li class="sub-nav" ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, key, subNav.config);">
                     {{subNav.name}}
                 </li>
             </ul>

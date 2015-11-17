@@ -123,7 +123,15 @@
       $rootScope.componentURL = 'sdfsdf';
       $scope.data = blend_ui.navigation;
       $scope.toggleMenu = function(event) {
-        $(event.target).parent().toggleClass('open');
+        if(!$(event.target).hasClass('sub-nav')){
+          $('.open').removeClass('open');
+          $(event.target).addClass('open');  
+        }
+        else{
+          $('li.active').removeClass('active');
+          $(event.target).addClass('active');   
+        }
+        
       }
 
       $scope.runComponent;
@@ -158,27 +166,27 @@
 
 
         $('.view-port').height($(window).height() - 0);
-        var min = 300;
-        var max = 3600;
-        var mainmin = 200;
+        // var min = 300;
+        // var max = 3600;
+        // var mainmin = 200;
 
-        $('#split-bar').mousedown(function (e) {          
-            e.preventDefault();
-            $(document).mousemove(function (e) {
-                console.log(e);
-                e.preventDefault();
-                var x = e.pageX - $('.borrower').offset().left;
-                if (x > min && x < max && e.pageX < ($(window).width() - mainmin)) {  
-                  $('.borrower').css("width", x);
-                  $('#split-bar').css("left", x);
-                  $('.lender').css("margin-left", x);
-                  $('.lender').css("width", e.pageX + $('.borrower').offset().left);
-                }
-            })
-        });
-        $(document).mouseup(function (e) {
-            $(document).unbind('mousemove');
-        });
+        // $('#split-bar').mousedown(function (e) {          
+        //     e.preventDefault();
+        //     $(document).mousemove(function (e) {
+        //         console.log(e);
+        //         e.preventDefault();
+        //         var x = e.pageX - $('.borrower').offset().left;
+        //         if (x > min && x < max && e.pageX < ($(window).width() - mainmin)) {  
+        //           $('.borrower').css("width", x);
+        //           $('#split-bar').css("left", x);
+        //           $('.lender').css("margin-left", x);
+        //           $('.lender').css("width", e.pageX + $('.borrower').offset().left);
+        //         }
+        //     })
+        // });
+        // $(document).mouseup(function (e) {
+        //     $(document).unbind('mousemove');
+        // });
 
 
 

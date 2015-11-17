@@ -4,17 +4,21 @@
         <label>{{filter}}</label>
         <input type="radio" />
     </div>
-    
+    <ul>
+            <li ng-click="formBuilder();">Form Builder</li>
+        </ul>
 
 </div>
-<div id="main-container">
+<div id="main-container col-md-9">
 
-<div class="borrower view-port">
+<div class="borrower view-port col-md-6">
   <div ng-include="component_BORROWERURL"></div>
+  <label class="v-label">Borrower</label>
 </div>
-    <div id="split-bar"></div>
-<div class="lender view-port">
+<!--     <div id="split-bar"></div> -->
+<div class="lender view-port col-md-6">
     <div ng-include="component_LENDERURL"></div>
+    <label class="v-label">Lender</label>
 </div>
 
 
