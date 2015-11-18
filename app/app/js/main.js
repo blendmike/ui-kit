@@ -136,6 +136,8 @@
 
       $scope.runComponent;
 
+
+    
       
 
       $scope.runComponent = function(a,b,c) {
@@ -145,10 +147,25 @@
         $rootScope.component = $filter('compress')(a);
         $rootScope.folder = b.replace(/[_-]/g, "");
 
-        $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.folder+'/'+$rootScope.component+'.html';
-        $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.folder+'/'+$rootScope.component+'.html';
         //var el = $compile( '<div ng-include="/components/lender/input.html"></div>' )( $scope );
-        
+        if($rootScope.formBuilderStatus){
+           var htmlprev_content_b = $('.borrower.view-port').html();
+           var htmlcontent_b = $('.borrower.view-port');
+           var htmlprev_content_l = $('.borrower.view-port').html();
+           var htmlcontent_l = $('.lender.view-port');
+               htmlcontent_b.load('/components/borrower/'+$rootScope.folder+'/'+$rootScope.component+'.html')
+               console.log(htmlprev_content_b)
+               setTimeout(function(){htmlcontent_b.prepend(htmlprev_content_b)},100);
+               htmlcontent_l.append($compile( '<div ng-include="/components/lender/date.html"></div>' )( $scope ));
+               htmlcontent_l.load('/components/lender/'+$rootScope.folder+'/'+$rootScope.component+'.html')
+               console.log(htmlprev_content_l)
+               setTimeout(function(){htmlcontent_l.prepend(htmlprev_content_l)},100);
+          
+        }
+        else{
+          $rootScope.component_BORROWERURL = '/components/borrower/'+$rootScope.folder+'/'+$rootScope.component+'.html';
+          $rootScope.component_LENDERURL = '/components/lender/'+$rootScope.folder+'/'+$rootScope.component+'.html';
+        }
 
       }
 
@@ -163,6 +180,22 @@
           $scope.filters = $rootScope.headerFilters;
         }, true);
 
+
+      $rootScope.formBuilderStatus = false;
+
+      $scope.formBuilder = function(event) {
+     
+        $(event.target).toggleClass('active'); 
+        $rootScope.formBuilderStatus = !$rootScope.formBuilderStatus;
+        if($rootScope.formBuilderStatus){
+          $('.view-port #main-content').empty();
+        }
+        else{
+          $('.view-port').empty();
+
+        }
+        
+      };
 
 
         $('.view-port').height($(window).height() - 0);

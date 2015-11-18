@@ -3649,6 +3649,9 @@ header .navbar {
   color: #fff;
   display: inline-block;
 }
+.dashboard-header ul li.active {
+  background: #ccc;
+}
 
 #split-bar {
   background: #ebebeb;

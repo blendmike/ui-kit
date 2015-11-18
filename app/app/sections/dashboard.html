@@ -5,19 +5,19 @@
         <input type="radio" />
     </div>
     <ul>
-            <li ng-click="formBuilder();">Form Builder</li>
+            <li ng-click="formBuilder($event);">Form Builder</li>
         </ul>
 
 </div>
 <div id="main-container col-md-9">
 
 <div class="borrower view-port col-md-6">
-  <div ng-include="component_BORROWERURL"></div>
+  <div ng-include="component_BORROWERURL" id="main-content"></div>
   <label class="v-label">Borrower</label>
 </div>
 <!--     <div id="split-bar"></div> -->
 <div class="lender view-port col-md-6">
-    <div ng-include="component_LENDERURL"></div>
+    <div ng-include="component_LENDERURL" id="main-content"></div>
     <label class="v-label">Lender</label>
 </div>
 

@@ -3,7 +3,7 @@ var blend_ui = {
     form_inputs: [
       {
         name : 'Text',
-        html : '<input type="text" class="blend-input" placeholder="text field"/>',
+        
         //config : ['long_text','short_text']
       },
       {
