@@ -12,8 +12,8 @@
           templateUrl: "./sections/dashboard.html",
           controller: "MainController"
         })
-        .when("/text", {
-          templateUrl: "./sections/dashboard.html",
+        .when("/form-builder", {
+          templateUrl: "./sections/form-builder.html",
           controller: "MainController"
         })
         .when("/apply", {
@@ -29,6 +29,67 @@
         });
     }
   ]);
+
+
+
+
+
+//Directive for adding buttons on click that show an alert on click
+// app.directive("addbuttons", function($compile){
+//   return function(scope, element, attrs){
+//     element.bind("click", function(){
+//       scope.count++;
+//       angular.element(document.getElementById('space-for-buttons')).append($compile("<div><button class='btn btn-default' data-alert='sdfsdf'>Show alert #1 </button></div>")(scope));
+//     });
+//   };
+// });
+
+app.directive('addComponent', [
+  '$http',
+  '$compile',
+  function($http, $compile) {
+
+    return {
+      scope: false,
+      link: function(scope, element, attrs){
+        var folder_dir = attrs["folderDirectory"];
+        var tpl_l = "/components/lender/"+folder_dir+"/"+attrs["addComponent"]+".html";
+        var tpl_b = "/components/borrower/"+folder_dir+"/"+attrs["addComponent"]+".html";
+
+        element.bind("click", function(){
+        scope.message = attrs.message;
+
+        $http.get(tpl_b)
+          .then(function(response){
+            console.log(response);
+             angular.element(document.getElementById('form-borrower-content')).append($compile(response.data)(scope));
+          });
+
+        $http.get(tpl_l)
+          .then(function(response){
+            console.log(response);
+             angular.element(document.getElementById('form-lender-content')).append($compile(response.data)(scope));
+          });  
+        });
+      }
+    };
+
+  }
+]);
+
+
+//Directive for showing an alert on click
+app.directive("alert", function(){
+  return function(scope, element, attrs){
+    element.bind("click", function(){
+      console.log(attrs);
+      alert("This is alert #"+attrs.alert);
+    });
+  };
+});
+
+
+
   app.directive("limitTo", [function() {
     return {
         restrict: "A",
@@ -96,6 +157,7 @@
     return function(text) {
       var str = text.replace(/[_-]/g, " ");
       str = str.replace(/[^\w\s]/gi, '');
+      str = str.replace(/ /g,'');
       return str;
     };
   })
@@ -180,6 +242,11 @@
           $scope.filters = $rootScope.headerFilters;
         }, true);
 
+
+      $scope.go = function ( path ) {
+        $location.path( path );
+      };
+      $scope.data = blend_ui.navigation;
 
       $rootScope.formBuilderStatus = false;
 
