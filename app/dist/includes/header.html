@@ -1,14 +1,14 @@
 <div class="brand">
         <img width="140" src="https://blendlabs.com/wp-content/themes/blendlabs/images/logo.svg" />
 
-        
+
 </div>
 <nav class="navbar col-md-12">
     <ul ng-repeat="(key, val) in data">
         <li ng-click="toggleMenu($event);">
             {{ key | removeSpacesThenLowercase}}
             <ul>
-                <li class="sub-nav" ng-repeat="subNav in data[key]" ng-click="runComponent(subNav.name, key, subNav.config);">
+                <li class="sub-nav" ng-repeat="subNav in data[key]" add-component='{{ subNav.name | compress}}' folder-directory="{{ key | removeSpacesThenLowercase}}" ng-click="runComponent(subNav.name, key, subNav.config);">
                     {{subNav.name}}
                 </li>
             </ul>

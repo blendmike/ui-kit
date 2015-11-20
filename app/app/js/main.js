@@ -52,23 +52,29 @@ app.directive('addComponent', [
     return {
       scope: false,
       link: function(scope, element, attrs){
-        var folder_dir = attrs["folderDirectory"];
-        var tpl_l = "/components/lender/"+folder_dir+"/"+attrs["addComponent"]+".html";
-        var tpl_b = "/components/borrower/"+folder_dir+"/"+attrs["addComponent"]+".html";
-
         element.bind("click", function(){
         scope.message = attrs.message;
+        var folder_dir = attrs["folderDirectory"];
+        var rdm = Math.floor((Math.random()*100)+1);
+        var attr_ = "'" + attrs["addComponent"] + rdm+"'";
+        var attr = attrs["addComponent"] + rdm;
+        var tpl_l = "/components/lender/"+folder_dir+"/"+attrs["addComponent"]+".html";
+        var tpl_b = "/components/borrower/"+folder_dir+"/"+attrs["addComponent"]+".html";
+        var a_tmp = '<div class="comp-container '+attr+'"><div class="tmp close" data-ng-click="deleteItem('+attr_+')">X</div>';
+        var b_tmp = "<div class='tmp-bottom "+attrs["addComponent"]+"'></div></div>";
+
 
         $http.get(tpl_b)
           .then(function(response){
-            console.log(response);
-             angular.element(document.getElementById('form-borrower-content')).append($compile(response.data)(scope));
+            
+             var rd = a_tmp + response.data + b_tmp;
+             angular.element(document.getElementById('form-borrower-content')).append($compile(rd)(scope));
           });
 
         $http.get(tpl_l)
           .then(function(response){
-            console.log(response);
-             angular.element(document.getElementById('form-lender-content')).append($compile(response.data)(scope));
+             var rd = a_tmp + response.data + b_tmp;
+             angular.element(document.getElementById('form-lender-content')).append($compile(rd)(scope));
           });  
         });
       }
@@ -199,7 +205,10 @@ app.directive("alert", function(){
       $scope.runComponent;
 
 
-    
+      $scope.deleteItem = function (a){
+        $('.'+a).remove();
+      };
+
       
 
       $scope.runComponent = function(a,b,c) {
@@ -241,6 +250,7 @@ app.directive("alert", function(){
         $rootScope.$watch('headerFilters', function(){
           $scope.filters = $rootScope.headerFilters;
         }, true);
+
 
 
       $scope.go = function ( path ) {
